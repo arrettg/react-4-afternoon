@@ -10,6 +10,7 @@ export default class Student extends Component {
     };
   }
   componentDidMount() {
+    console.log(this.props.match);
     return axios
       .get(`http://localhost:3005/students/${this.props.match.params.id}`)
       .then(results => {
